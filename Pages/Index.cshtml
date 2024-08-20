@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">@Model.messageDAccueil</h1>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Username))
+    {
+        <p>Tu m'as passe comme nom d'utilisateur : @Model.Username</p>
+    }
+
+    @if (false) {
+        <p>Coucou</p>
+    }
+
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
