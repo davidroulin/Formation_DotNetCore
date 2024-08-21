@@ -1,0 +1,68 @@
+﻿@page
+@model WebAppEcole.Pages.StudentsModel
+@{
+    ViewData["Title"] = "Students";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Les etudiants.</p>
+
+
+@foreach(var student in Model.theStudents) {
+    <p>@student</p>
+}
+
+
+<h2>Create new student</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input type="text" class="form-control" id="firstName" name="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="lastName" name="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="birthDate" class="form-label">Birth date</label>
+        <input type="date" class="form-control" id="birthDate" name="BirthDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+@* <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table> *@
+
+
