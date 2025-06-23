@@ -116,6 +116,11 @@ namespace ConsoleApp
             Instance.InstanceTimeLog(line);
         }
 
+        public static void Log(string line)
+        {
+            Console.WriteLine(line);
+        }
+
 
         static void Main(string[] args)
         {

@@ -74,8 +74,9 @@ class ExempleCollections
 		Dictionary<Host, List<Connection>> connectionsMultiples = new Dictionary<Host, List<Connection>>();
 
 
-		connectionsMultiples[local] = new List<Connection>();
-		connectionsMultiples[local].Add( new Connection { port = 443, protocol = "UDP" } );
+		//connectionsMultiples[local] = new List<Connection>();
+		connectionsMultiples.Add(local, new List<Connection>());
+        connectionsMultiples[local].Add( new Connection { port = 443, protocol = "UDP" } );
 		connectionsMultiples[local].Add( new Connection { port = 888, protocol = "HTTP" } );
 
 		connectionsMultiples.Add(
@@ -136,8 +137,8 @@ class ExempleCollections
 		);
 
 		// plus besoin
-		//Action<int> callback = new Action<int>(FaisUnTrucAvecUnInt);
-		//listeDeNombres.ForEach(FaisUnTrucAvecUnInt);
+		Action<int> callback = new Action<int>(FaisUnTrucAvecUnInt);
+		listeDeNombres.ForEach(FaisUnTrucAvecUnInt);
 
 
 		// TODO
